@@ -1,0 +1,64 @@
+/* Web Development Services Specific Styles */
+.service-item {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(9, 30, 62, .1);
+}
+
+.service-item .service-icon {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+    background: var(--secondary);
+    transform: rotate(360deg);
+}
+
+.service-item .btn {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .btn {
+    bottom: 10px;
+    opacity: 1;
+}
+/* General styles for the images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Spacing and alignment */
+.section-title h5 {
+    font-size: 18px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+}
+
+/* Icon hover effect */
+.fa-check {
+    transition: transform 0.3s ease;
+}
+
+.fa-check:hover {
+    transform: scale(1.2);
+    color: var(--secondary);
+}
