@@ -297,6 +297,9 @@
     </div>
 </div>
 <!-- Features End -->
+
+
+
  <!-- Service Start -->
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
@@ -367,10 +370,304 @@
 <!-- Service End -->
 
 
-    <!-- Pricing Plan Start -->
+    <!-- Portfolio Plan Start -->
 
       
+   <!-- Portfolio Section HTML -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">Portfolio</h5>
+            <h1 class="mb-0">Our Work</h1>
+        </div>
+        
+        <!-- Portfolio Filter Buttons -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <ul class="list-inline portfolio-filter">
+                    <li class="list-inline-item btn btn-primary m-1 active" data-filter="*">All</li>
+                   
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Portfolio Items -->
+        <div class="row portfolio-container">
+            <!-- Portfolio Item 1 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item web-design">
+                <div class="portfolio-wrap">
+                    <img src="./img/Template/1.png" class = "img-fluid" alt="Portfolio Item">
+                    <div class="portfolio-info">
+                        <h4>Web Project 1</h4>
+                        <p>Web Design</p>
+                        <div class="portfolio-links">
+                            <a href="./img/Template/1.jpeg" data-gallery="portfolioGallery" class="btn btn-sm-square btn-primary portfolio-lightbox"><i class="fa fa-eye"></i></a>
+                            <a target="_blank" href="file:///E:/Projects/Company/Website/startup-website-template/Website/proj-1/index.html" class="btn btn-sm-square btn-primary"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 2 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item development">
+                <div class="portfolio-wrap">
+                    <img src="./img/Template/2.png" class="img-fluid" alt="Portfolio Item">
+                    <div class="portfolio-info">
+                        <h4>App Development</h4>
+                        <p>Development</p>
+                        <div class="portfolio-links">
+                            <a href="./img/Template/2.jpeg" data-gallery="portfolioGallery" class="btn btn-sm-square btn-primary portfolio-lightbox"><i class="fa fa-eye"></i></a>
+                            <a target="_blank" href="file:///E:/Projects/Company/Website/startup-website-template/Website/proj-2/index.html" class="btn btn-sm-square btn-primary"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 3 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item branding">
+                <div class="portfolio-wrap">
+                    <img src="./img/Template/3-1.jpeg" class="img-fluid" alt="Portfolio Item">
+                    <div class="portfolio-info">
+                        <h4>Brand Identity</h4>
+                        <p>Branding</p>
+                        <div class="portfolio-links">
+                            <a href="./img/Template/3.jpeg" data-gallery="portfolioGallery" class="btn btn-sm-square btn-primary portfolio-lightbox"><i class="fa fa-eye"></i></a>
+                            <a target="_blank" href="file:///E:/Projects/Company/Website/startup-website-template/Website/proj-3/index.html" class="btn btn-sm-square btn-primary"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 4 -->
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item web-design">
+                <div class="portfolio-wrap">
+                    <img src="./img/Template/4-1.jpeg" class="img-fluid" alt="Portfolio Item">
+                    <div class="portfolio-info">
+                        <h4>E-commerce Website</h4>
+                        <p>Web Design</p>
+                        <div class="portfolio-links">
+                            <a href="./img/Template/4.jpeg" data-gallery="portfolioGallery" class="btn btn-sm-square btn-primary portfolio-lightbox"><i class="fa fa-eye"></i></a>
+                            <a target="_blank" href="file:///E:/Projects/Company/Website/startup-website-template/Website/proj-4/index.html" class="btn btn-sm-square btn-primary"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 5 -->
+           
+            
+            <!-- Portfolio Item 6 -->
+           
+        </div>
+    </div>
+</div>
 
+<!-- CSS for Portfolio Section -->
+<style>
+/* Portfolio Section Styling */
+.portfolio-filter {
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.portfolio-filter li {
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.portfolio-filter li.active {
+    background-color: var(--secondary) !important;
+    box-shadow: none;
+}
+
+.portfolio-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: .5s;
+}
+
+.portfolio-wrap:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.portfolio-wrap img {
+    transition: .5s;
+    width: 100%;
+}
+
+.portfolio-wrap:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-info {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(9, 30, 62, .8);
+    padding: 20px;
+    text-align: center;
+    transition: .5s;
+}
+
+.portfolio-wrap:hover .portfolio-info {
+    bottom: 0;
+}
+
+.portfolio-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.portfolio-info p {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.portfolio-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.portfolio-links a {
+    margin: 0 3px;
+    color: #FFFFFF;
+}
+
+.portfolio-links a:hover {
+    background-color: var(--secondary);
+}
+
+/* Animation for Portfolio Items */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.portfolio-item {
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+/* Responsive Portfolio */
+@media (max-width: 768px) {
+    .portfolio-filter li {
+        margin-bottom: 10px;
+    }
+    
+    .portfolio-wrap {
+        margin-bottom: 20px;
+    }
+}
+</style>
+
+<!-- JavaScript for Portfolio Filtering and Lightbox -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Portfolio filtering functionality
+    const filterButtons = document.querySelectorAll('.portfolio-filter li');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    // Add click event to filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Get filter value
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Filter portfolio items
+            portfolioItems.forEach(item => {
+                if (filterValue === '*') {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 100);
+                } else if (item.classList.contains(filterValue.substring(1))) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 100);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 500);
+                }
+            });
+        });
+    });
+    
+    // Simple lightbox functionality
+    const lightboxLinks = document.querySelectorAll('.portfolio-lightbox');
+    
+    lightboxLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const imageSrc = this.getAttribute('href');
+            
+            // Create lightbox elements
+            const lightbox = document.createElement('div');
+            lightbox.className = 'portfolio-lightbox-container';
+            lightbox.style.position = 'fixed';
+            lightbox.style.top = '0';
+            lightbox.style.left = '0';
+            lightbox.style.width = '100%';
+            lightbox.style.height = '100%';
+            lightbox.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            lightbox.style.zIndex = '9999';
+            lightbox.style.display = 'flex';
+            lightbox.style.justifyContent = 'center';
+            lightbox.style.alignItems = 'center';
+            
+            const lightboxImg = document.createElement('img');
+            lightboxImg.src = imageSrc;
+            lightboxImg.style.maxWidth = '90%';
+            lightboxImg.style.maxHeight = '90%';
+            lightboxImg.style.border = '5px solid #fff';
+            lightboxImg.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.5)';
+            
+            const closeBtn = document.createElement('span');
+            closeBtn.innerHTML = '&times;';
+            closeBtn.style.position = 'absolute';
+            closeBtn.style.top = '20px';
+            closeBtn.style.right = '30px';
+            closeBtn.style.fontSize = '40px';
+            closeBtn.style.color = '#fff';
+            closeBtn.style.cursor = 'pointer';
+            
+            // Append elements to lightbox
+            lightbox.appendChild(lightboxImg);
+            lightbox.appendChild(closeBtn);
+            document.body.appendChild(lightbox);
+            
+            // Close lightbox on click
+            lightbox.addEventListener('click', function() {
+                document.body.removeChild(lightbox);
+            });
+            
+            // Prevent propagation when clicking on image
+            lightboxImg.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+    });
+});
+</script>
 
     <!-- Testimonial Start -->
    <!-- Testimonial Start -->
