@@ -386,15 +386,17 @@
             <div class="col-12 text-center">
                 <ul class="list-inline portfolio-filter">
                     <li class="list-inline-item btn btn-primary m-1 active" data-filter="*">All</li>
-                   
+                    <li class="list-inline-item btn btn-primary m-1" data-filter="web">Website</li>
+                    <li class="list-inline-item btn btn-primary m-1" data-filter="App">App</li>
                 </ul>
             </div>
         </div>
         
+        
         <!-- Portfolio Items -->
         <div class="row portfolio-container">
             <!-- Portfolio Item 1 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item web-design">
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item web-design web">
                 <div class="portfolio-wrap">
                     <img src="./img/Template/1.png" class = "img-fluid" alt="Portfolio Item">
                     <div class="portfolio-info">
@@ -409,7 +411,7 @@
             </div>
             
             <!-- Portfolio Item 2 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item development">
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item development web">
                 <div class="portfolio-wrap">
                     <img src="./img/Template/2.png" class="img-fluid" alt="Portfolio Item">
                     <div class="portfolio-info">
@@ -422,9 +424,34 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item development App">
+                <div class="portfolio-wrap">
+                    <img src="./img/App1.png" class="img-fluid" alt="Portfolio Item">
+                    <div class="portfolio-info">
+                        <h4>AI Budjet Tracker</h4>
+                        <p>Development</p>
+                        <div class="portfolio-links">
+                            <a href="./img/App1.png" data-gallery="portfolioGallery" class="btn btn-sm-square btn-primary portfolio-lightbox"><i class="fa fa-eye"></i></a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item development App">
+                <div class="portfolio-wrap">
+                    <img src="./img/App2.png" class="img-fluid" alt="Portfolio Item">
+                    <div class="portfolio-info">
+                        <h4>Doctor Appointment App</h4>
+                        <p>Development</p>
+                        <div class="portfolio-links">
+                            <a href="./img/App2.png" data-gallery="portfolioGallery" class="btn btn-sm-square btn-primary portfolio-lightbox"><i class="fa fa-eye"></i></a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Portfolio Item 3 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item branding">
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item branding web">
                 <div class="portfolio-wrap">
                     <img src="./img/Template/3-1.jpeg" class="img-fluid" alt="Portfolio Item">
                     <div class="portfolio-info">
@@ -439,7 +466,7 @@
             </div>
             
             <!-- Portfolio Item 4 -->
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item web-design">
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item web-design web">
                 <div class="portfolio-wrap">
                     <img src="./img/Template/4-1.jpeg" class="img-fluid" alt="Portfolio Item">
                     <div class="portfolio-info">
@@ -455,7 +482,7 @@
              
             <!-- Portfolio Item 5 -->
            
-            <div class="col-lg-4 col-md-6 mb-4 portfolio-item web-design">
+            <div class="col-lg-4 col-md-6 mb-4 portfolio-item web-design web">
                 <div class="portfolio-wrap">
                     <img src="./img/Template/proj-5.png" class="img-fluid" alt="Portfolio Item">
                     <div class="portfolio-info">
@@ -582,44 +609,48 @@
 
 <!-- JavaScript for Portfolio Filtering and Lightbox -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Portfolio filtering functionality
-    const filterButtons = document.querySelectorAll('.portfolio-filter li');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
-    // Add click event to filter buttons
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            // Get filter value
-            const filterValue = this.getAttribute('data-filter');
-            
-            // Filter portfolio items
-            portfolioItems.forEach(item => {
-                if (filterValue === '*') {
-                    item.style.display = 'block';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, 100);
-                } else if (item.classList.contains(filterValue.substring(1))) {
-                    item.style.display = 'block';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, 100);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 500);
-                }
+    document.addEventListener('DOMContentLoaded', function() {
+        // Portfolio filtering functionality
+        const filterButtons = document.querySelectorAll('.portfolio-filter li');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        // Add click event to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get filter value
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Filter portfolio items
+                portfolioItems.forEach(item => {
+                    if (filterValue === '*') {
+                        // Show all items
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else if (item.classList.contains(filterValue)) {
+                        // Show items matching the filter
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        // Hide items not matching the filter
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 500);
+                    }
+                });
             });
         });
     });
@@ -678,7 +709,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-});
+
 </script>
 
     <!-- Testimonial Start -->
